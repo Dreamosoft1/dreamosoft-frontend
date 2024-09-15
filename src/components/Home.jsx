@@ -6,11 +6,12 @@ import AboutUs from "./AboutUs.jsx";
 import HeroSection from "./HeroSection.jsx";
 import Solutions from "./Solutions.jsx";
 import Services from "./Services.jsx";
-
-import ScreensImage from "../assets/img/screens.png";
 import ChooseUs from "./ChooseUs.jsx";
 import Projects from "./Projects.jsx";
 import ContactUs from "./ContactUs.jsx";
+import Footer from "./Footer.jsx";
+
+import ScreensImage from "../assets/img/screens.png";
 
 const Home = () => {
 	useEffect(() => {
@@ -51,6 +52,7 @@ const Home = () => {
 			<Projects />
 			<Solutions />
 			<ContactUs />
+			<Footer />
 		</>
 	);
 };
