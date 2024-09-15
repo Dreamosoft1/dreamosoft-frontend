@@ -24,8 +24,6 @@ const Services = () => {
 					<ServiceCard text={`UI/UX <br/> Design`} image={DesignImage} />
 					<ServiceCard text={"Machine <br/> Learning Projects"} image={MachineImage} />
 				</div>
-				{/* <div className="w-full flex items-center  gap-24 mt-24 justify-center">
-				</div> */}
 			</div>
 		</section>
 	);
