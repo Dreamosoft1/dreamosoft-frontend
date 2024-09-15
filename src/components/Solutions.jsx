@@ -8,10 +8,16 @@ const Solutions = () => {
 
 				<div className="w-full grid mt-16 md:grid-cols-4 gap-6">
 					{solutions?.map((solution, index) => (
-						<div key={index} className="w-full border-[1px] border-desc p-4 rounded-[10px]">
-							<div className="w-12 h-12 bg-[red] mx-auto"></div>
-							<h3 className="mt-6 h-14  text-title text-xl font-semibold mb-3">{solution.title}</h3>
-							<p className="text-sm text-desc">{solution.desc}</p>
+						<div key={index} className="w-full border-[1px] flex flex-col items-start justify-start border-desc p-4 rounded-[10px]">
+							<div className="w-16 h-12  mx-auto" style={{ width: `${60 * (solution.imageSize || 1)}px` }}>
+								<img src={solution.image} alt="" />
+							</div>
+							<h3 className="mt-8 h-auto mb-4 text-left  text-title text-lg font-semibold">{solution.title}</h3>
+							<p className="text-sm mb-4 text-desc">{solution.desc}</p>
+
+							<a href="" target="_blank" className="text-section-label text-sm hover:underline inline-block mt-auto">
+								Learn more
+							</a>
 						</div>
 					))}
 				</div>

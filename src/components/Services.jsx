@@ -12,9 +12,9 @@ const Services = () => {
 			<div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center">
 				<h3 className="font-bold text-3xl text-section-heading mb-2">Popular Services</h3>
 				<div className="flex items-center justify-center gap-3">
-					<span className="w-20 h-[3px] bg-section-label"></span>
+					<span className="w-20 h-[4px] rounded-full shadow-xl bg-section-label"></span>
 					<p className="text-section-label">Experience our excellence through our services</p>
-					<span className="w-20 h-[3px] bg-section-label"></span>
+					<span className="w-20 h-[4px] rounded-full shadow-xl bg-section-label"></span>
 				</div>
 
 				<div className="w-full flex mt-12 items-center gap-24 justify-center">

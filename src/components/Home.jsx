@@ -8,6 +8,8 @@ import Solutions from "./Solutions.jsx";
 import Services from "./Services.jsx";
 
 import ScreensImage from "../assets/img/screens.png";
+import ChooseUs from "./ChooseUs.jsx";
+import Projects from "./Projects.jsx";
 
 const Home = () => {
 	useEffect(() => {
@@ -43,6 +45,9 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
+
+			<ChooseUs />
+			<Projects />
 			<Solutions />
 		</>
 	);
