@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 const Footer = () => {
 	return (
 		<footer className="w-full py-12 text-white md:py-24 px-4 bg-[#4EA4D6]">
