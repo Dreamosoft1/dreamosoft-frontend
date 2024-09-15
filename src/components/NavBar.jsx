@@ -2,17 +2,18 @@ import "flowbite";
 import logo from "../assets/img/logo.svg";
 import logo_small from "../assets/img/logo_small.svg";
 import moon from "../assets/img/moon.svg";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 	return (
 		<>
-			<nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+			<nav className="bg-white sticky top-0 left-0 z-[3] border-gray-200 dark:bg-gray-900 dark:border-gray-700 navbar">
 				<div className="w-screen flex items-center justify-between mx-auto">
 					{/* Logo on the left */}
 					<div className="flex items-center">
-						<a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+						<Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
 							<img src={logo} className="h-16" alt="dreamosoft Logo" />
-						</a>
+						</Link>
 					</div>
 
 					{/* Centered Nav Links */}
