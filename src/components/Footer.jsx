@@ -13,12 +13,12 @@ const Footer = () => {
 					<div className="w-full md:w-1/2">
 						<h3 className="text-2xl mb-6 font-bold">Quick Links</h3>
 						<nav className="flex flex-col gap-3">
-							<a href="/">Home</a>
-							<a href="/">About Us</a>
-							<a href="/">Services</a>
-							<a href="/">Projects</a>
-							<a href="/">Testimonials</a>
-							<a href="/">Contact Us</a>
+							<a href="#">Home</a>
+							<a href="#about">About Us</a>
+							<a href="#services">Services</a>
+							<a href="#projects">Projects</a>
+							<a href="#testimonials">Testimonials</a>
+							<a href="#contact">Contact Us</a>
 						</nav>
 					</div>
 					<div className="w-full md:w-1/2">

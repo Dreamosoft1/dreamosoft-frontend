@@ -4,7 +4,7 @@ import ProjectImage from "../assets/img/project.png";
 
 const Projects = () => {
 	return (
-		<section id="projects" className="py-16 pb-8 bg-[#D7FFE7] ">
+		<section id="projects" className="py-16 pb-8 bg-[#D7FFE7]">
 			<div className="max-w-6xl mx-auto w-full  flex flex-col items-center justify-center">
 				<h3 className="text-2xl font-bold  text-[#177525]">Recent Projects</h3>
 				<div className="w-full mt-12 flex flex-col md:flex-row items-stretch justify-between gap-12">

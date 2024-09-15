@@ -8,7 +8,7 @@ import DataAnalysisImage from "../assets/img/data_analysis.png";
 
 const Services = () => {
 	return (
-		<section className="w-full h-auto py-12 md:py-24 px-4">
+		<section className="w-full h-auto py-12 md:py-24 px-4" id="services">
 			<div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center">
 				<h3 className="font-bold text-3xl text-section-heading mb-2">Popular Services</h3>
 				<div className="flex items-center justify-center gap-[6px] md:gap-3">

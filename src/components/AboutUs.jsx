@@ -4,7 +4,7 @@ const AboutUs = () => {
 	return (
 		<>
 			{/* About Us Section */}
-			<section className="py-12 pt-24 bg-white dark:bg-gray-900 px-4 md:px-10" data-aos="fade-up" style={{ background: "#F5F6FB" }}>
+			<section className="py-12 pt-24 bg-white dark:bg-gray-900 px-4 md:px-10" id="about" data-aos="fade-up" style={{ background: "#F5F6FB" }}>
 				<h2 className="text-4xl md:mb-14 font-bold text-section-heading dark:text-white  text-center">About Us</h2>
 				<div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 					{/* Illustration */}
