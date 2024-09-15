@@ -1,4 +1,8 @@
+import { useLocation } from "react-router-dom";
+
 const Footer = () => {
+	const { hash } = useLocation();
+	console.log(hash);
 	return (
 		<footer className="w-full py-12 text-white md:py-24 px-4 bg-[#4EA4D6]">
 			<div className="w-full max-w-6xl mx-auto flex-col md:flex-row flex items-stretch gap-12 justify-between">
@@ -13,12 +17,24 @@ const Footer = () => {
 					<div className="w-full md:w-1/2">
 						<h3 className="text-2xl mb-6 font-bold">Quick Links</h3>
 						<nav className="flex flex-col gap-3">
-							<a href="#">Home</a>
-							<a href="#about">About Us</a>
-							<a href="#services">Services</a>
-							<a href="#projects">Projects</a>
-							<a href="#testimonials">Testimonials</a>
-							<a href="#contact">Contact Us</a>
+							<a href="#" className={`${hash === "" ? "text-blue-700" : "text-white"}`}>
+								Home
+							</a>
+							<a href="#about" className={`${hash === "#about" ? "text-blue-700" : "text-white"}`}>
+								About Us
+							</a>
+							<a href="#services" className={`${hash === "#services" ? "text-blue-700" : "text-white"}`}>
+								Services
+							</a>
+							<a href="#projects" className={`${hash === "#projects" ? "text-blue-700" : "text-white"}`}>
+								Projects
+							</a>
+							<a href="#testimonials" className={`${hash === "#testimonials" ? "text-blue-700" : "text-white"}`}>
+								Testimonials
+							</a>
+							<a href="#contact" className={`${hash === "#contact" ? "text-blue-700" : "text-white"}`}>
+								Contact Us
+							</a>
 						</nav>
 					</div>
 					<div className="w-full md:w-1/2">
