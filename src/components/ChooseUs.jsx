@@ -4,7 +4,7 @@ import CareerAdvancementImage from "../assets/img/career_advancement.png";
 
 const ChooseUsCard = ({ image, title, desc }) => {
 	return (
-		<div className="w-1/3 rounded-[10px]  border-[1px] border-primary-1 flex p-8 items-center justify-start flex-col h-auto relative overflow-hidden">
+		<div className="w-full max-w-[360px] md:w-1/3 rounded-[10px]  border-[1px] border-primary-1 flex p-8 items-center justify-start flex-col h-auto relative overflow-hidden">
 			<div className="w-3/5 mb-2 rounded-[5px] bg-[#AEE6FF] py-2 h-20 flex items-center justify-center">
 				<img src={image} alt="" className="w-16 h-full" />
 			</div>
@@ -16,10 +16,10 @@ const ChooseUsCard = ({ image, title, desc }) => {
 
 const ChooseUs = () => {
 	return (
-		<section className="w-full py-24 bg-white">
+		<section className="w-full py-12 md:py-24 bg-white">
 			<div className="mx-auto w-full max-w-6xl flex flex-col items-center justify-center">
-				<h3 className="text-section-heading font-bold text-4xl">Why Choose Us?</h3>
-				<div className="flex gap-12 mt-16 items-stretch justify-between ">
+				<h3 className="text-section-heading font-bold text-2xl md:text-4xl">Why Choose Us?</h3>
+				<div className="flex flex-col md:flex-row gap-6 md:gap-12 mt-8 md:mt-16 items-stretch justify-between ">
 					<ChooseUsCard
 						image={FlexibleProjectsImage}
 						title={"Flexible Projects"}
