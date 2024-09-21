@@ -2,12 +2,28 @@ import "flowbite";
 import logo from "../assets/img/logo.svg";
 import logo_small from "../assets/img/logo_small.svg";
 import moon from "../assets/img/moon.svg";
+import sun from "../assets/img/sun.svg";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const NavBar = () => {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  if (theme == "dark") document.body.classList.add("dark");
+
+  function switchTheme() {
+    if (theme == "dark") {
+      setTheme("light");
+      localStorage.setItem("theme", "light");
+      document.body.classList.toggle("dark");
+    } else {
+      setTheme("dark");
+      localStorage.setItem("theme", "dark");
+      document.body.classList.toggle("dark");
+    }
+  }
   return (
     <>
-      <nav className="bg-white sticky top-0 left-0 z-[3] border-gray-200 dark:bg-gray-900 dark:border-gray-700 navbar shadow-md">
+      <nav className="bg-white sticky top-0 left-0 z-[3] border-gray-200 dark:bg-[#010833] dark:border-gray-700 navbar shadow-md">
         <div className="w-screen flex items-center justify-between mx-auto">
           {/* Logo on the left */}
           <div className="flex items-center">
@@ -21,10 +37,8 @@ const NavBar = () => {
 
           {/* Centered Nav Links */}
           <div className="hidden md:flex flex-grow justify-center">
-            <ul className="flex font-medium p-4 md:p-0 mt-4 items-center border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex font-medium p-4 md:p-0 mt-4 items-center border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-[#010833] dark:border-gray-700">
               <li>
-                {/* So like anytime I just enter the chat, that face is just smiling at me. :lol
-                    Sometimes I just wish it could just talk to me. :lol Or at least just frown, or make another expression. */}
                 <a
                   href="#"
                   className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
@@ -71,7 +85,12 @@ const NavBar = () => {
           {/* right hand side div */}
           <div className="flex gap-5 md:gap-14 mr-4">
             <div>
-              <img src={moon} className="h-10" alt="dreamosoft Logo" />
+              <img
+                src={theme == "light" ? moon : sun}
+                onClick={switchTheme}
+                className="h-10"
+                alt="dreamosoft Logo"
+              />
             </div>
             <button
               type="button"

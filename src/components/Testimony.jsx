@@ -1,6 +1,7 @@
 "use client";
 import profileImage from "../assets/img/profile.png";
-import React, { useState } from "react";
+import quote from "../assets/icons/quote.svg";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
@@ -96,6 +97,7 @@ export default function Testimonial() {
                   </h3>
                   <p className="text-gray-600 text-center">CEO</p>
                   <hr className="h-px my-4 w-4/5 m-auto  bg-gray-300 border-0 dark:bg-gray-700" />
+                  <img src={quote} alt="quote" className="h-8" />
                   <p className="p-6 text-gray-600 text-center italic text-sm">
                     {testimonial.quote}
                   </p>

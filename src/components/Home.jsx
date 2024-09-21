@@ -23,7 +23,6 @@ const Home = () => {
     <>
       {/* Hero section */}
       <HeroSection />
-
       <TechStack />
       <AboutUs />
       <Services />
