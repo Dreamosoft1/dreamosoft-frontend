@@ -30,9 +30,12 @@ const Home = () => {
       {/* Solutions  */}
       <section
         id="solutions"
-        className=" w-full py-4 md:py-16 px-4 bg-[#4EA4D6]"
+        className=" w-full py-4 md:py-16 px-4 bg-[#4EA4D6] dark:bg-[#010833]"
       >
-        <div className="w-full max-w-5xl  mx-auto flex flex-col md:flex-row items-stretch gap-0 md:gap-16 justify-normal">
+        <div
+          data-aos="fade-up"
+          className="w-full max-w-5xl  mx-auto flex flex-col md:flex-row items-stretch gap-0 md:gap-16 justify-normal"
+        >
           <div className="w-full md:w-1/2">
             <img
               src={ScreensImage}

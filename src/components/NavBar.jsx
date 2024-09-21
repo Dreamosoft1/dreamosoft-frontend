@@ -1,5 +1,6 @@
 import "flowbite";
 import logo from "../assets/img/logo.svg";
+import logoWhite from "../assets/img/logo-white.svg";
 import logo_small from "../assets/img/logo_small.svg";
 import moon from "../assets/img/moon.svg";
 import sun from "../assets/img/sun.svg";
@@ -31,7 +32,11 @@ const NavBar = () => {
               to="/"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
-              <img src={logo} className="h-16" alt="dreamosoft Logo" />
+              <img
+                src={theme == "light" ? logo : logoWhite}
+                className="h-16"
+                alt="dreamosoft Logo"
+              />
             </Link>
           </div>
 
@@ -41,7 +46,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                  className="block py-2 px-3 text-white bg-[#34BDFC] rounded md:bg-transparent md:text-[#34BDFC] md:p-0 md:dark:text-[#34BDFC] dark:bg-[#34BDFC] md:dark:bg-transparent"
                   aria-current="page"
                 >
                   Home
@@ -50,7 +55,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#about"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   About Us
                 </a>
@@ -58,7 +63,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#services"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Services
                 </a>
@@ -66,7 +71,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#projects"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Projects
                 </a>
@@ -74,7 +79,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="$testimonials"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Testimonials
                 </a>
@@ -94,7 +99,7 @@ const NavBar = () => {
             </div>
             <button
               type="button"
-              className="hidden md:block text-white bg-primary-1 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              className="hidden md:block text-white bg-primary-1 hover:bg-[#34BDFC] focus:ring-4 focus:ring-[#34BDFC] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-[#34BDFC] dark:hover:bg-[#34BDFC] focus:outline-none dark:focus:ring-[#34BDFC]"
             >
               Contact Us
             </button>
@@ -142,7 +147,7 @@ const NavBar = () => {
                       Sometimes I just wish it could just talk to me. :lol Or at least just frown, or make another expression. */}
                   <a
                     href="#"
-                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                     aria-current="page"
                   >
                     Home
@@ -151,7 +156,7 @@ const NavBar = () => {
                 <li>
                   <a
                     href="#about"
-                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >
                     About Us
                   </a>
@@ -159,7 +164,7 @@ const NavBar = () => {
                 <li>
                   <a
                     href="#services"
-                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >
                     Services
                   </a>
@@ -167,7 +172,7 @@ const NavBar = () => {
                 <li>
                   <a
                     href="#projects"
-                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >
                     Projects
                   </a>
@@ -175,7 +180,7 @@ const NavBar = () => {
                 <li>
                   <a
                     href="#testimonials"
-                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >
                     Testimonials
                   </a>

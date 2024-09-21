@@ -1,10 +1,3 @@
-import team from "../assets/img/team.svg";
-import teamWhite from "../assets/img/team-white.svg";
-import projects from "../assets/img/projects.svg";
-import projectsWhite from "../assets/img/projects-white.svg";
-import smile from "../assets/img/smile.svg";
-import smileWhite from "../assets/img/smile-white.svg";
-
 const HeroSection = () => {
   return (
     <>
@@ -12,7 +5,7 @@ const HeroSection = () => {
       <section className="pb-10">
         {/* banner header*/}
         <h1
-          className="text-center text-secondary-2 dark:text-white text-5xl  font-body font-bold mt-24"
+          className="text-center text-secondary-2 dark:text-white text-5xl font-body font-bold mt-24"
           style={{ letterSpacing: "3px" }}
         >
           Innovative Software Company{" "}

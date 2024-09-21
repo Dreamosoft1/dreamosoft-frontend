@@ -1,8 +1,14 @@
 const ContactUs = () => {
   return (
-    <section className="w-full py-12 md:py-24 px-4" id="contact">
-      <div className="w-full flex flex-col items-center justify-center">
-        <h3 className="text-3xl font-bold text-section-heading mb-6">
+    <section
+      className="w-full py-12 md:py-24 px-4 dark:bg-[#2C375A]"
+      id="contact"
+    >
+      <div
+        data-aos="fade-up"
+        className="w-full flex flex-col items-center justify-center"
+      >
+        <h3 className="text-3xl font-bold text-section-heading mb-6 dark:text-white">
           Contact Us
         </h3>
         <div className="flex items-center justify-center gap-3">
@@ -17,7 +23,7 @@ const ContactUs = () => {
           <div className="w-full">
             <input
               type="text"
-              className="w-full bg-[#B7DBEB] rounded-[5px] py-3 border-[1px] border-[#00CB5157] !focus:outline-0"
+              className="w-full bg-[#B7DBEB] dark:bg-[#010833] rounded-[5px] py-3 border-[1px] border-[#00CB5157] !focus:outline-0"
               placeholder="Enter Full Name"
               aria-label="Enter Full Name"
             />
@@ -26,7 +32,7 @@ const ContactUs = () => {
             <div className="w-full">
               <input
                 type="text"
-                className="w-full bg-[#B7DBEB] rounded-[5px] py-3 border-[1px] border-[#00CB5157] !focus:outline-0"
+                className="w-full bg-[#B7DBEB] dark:bg-[#010833] rounded-[5px] py-3 border-[1px] border-[#00CB5157] !focus:outline-0"
                 placeholder="Enter Email Address"
                 aria-label="Enter Email Address "
               />
@@ -34,7 +40,7 @@ const ContactUs = () => {
             <div className="w-full">
               <input
                 type="text"
-                className="w-full bg-[#B7DBEB] rounded-[5px] py-3 border-[1px] border-[#00CB5157] !focus:outline-0"
+                className="w-full bg-[#B7DBEB] dark:bg-[#010833] rounded-[5px] py-3 border-[1px] border-[#00CB5157] !focus:outline-0"
                 placeholder="Enter Phone Number"
                 aria-label="Enter Phone Number"
               />
@@ -43,7 +49,7 @@ const ContactUs = () => {
           <div className="w-full mt-4 md:mt-8">
             <textarea
               type="text"
-              className="w-full bg-[#B7DBEB] h-48 md:h-64 resize-none rounded-[5px] py-3 border-[1px] border-[#00CB5157] focus:outline-0"
+              className="w-full bg-[#B7DBEB] dark:bg-[#010833] h-48 md:h-64 resize-none rounded-[5px] py-3 border-[1px] border-[#00CB5157] focus:outline-0"
               placeholder="Type your Message"
               aria-label="Type your Message"
             ></textarea>
