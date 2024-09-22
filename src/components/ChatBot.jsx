@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import chatbotIcon from "../assets/icons/chatbot.svg";
 import chatbotChatIcon from "../assets/icons/chatbotChat.svg";
+import chatbotChatIconDark from "../assets/icons/chatbotChatDark.svg";
+import chatbotDark from "../assets/icons/chatbotDark.svg";
 import collapseIcon from "../assets/icons/collapse.svg";
+import collapseIconDark from "../assets/icons/collapseDark.svg";
 import send from "../assets/icons/send.svg";
 
 const Chatbot = () => {
@@ -33,17 +36,35 @@ const Chatbot = () => {
 
   return (
     <div className="fixed bottom-5 right-5 z-50">
-      <img
-        onClick={toggleChat}
-        className="w-20 h-20 text-white rounded-full flex items-center justify-center text-2xl focus:outline-none transition-colors"
-        src={isOpen ? collapseIcon : chatbotIcon}
-      />
+      {document.body.classList.contains("dark") ? (
+        <img
+          onClick={toggleChat}
+          className="w-20 h-20 text-white rounded-full flex items-center justify-center text-2xl focus:outline-none transition-colors"
+          src={isOpen ? collapseIconDark : chatbotDark}
+        />
+      ) : (
+        <img
+          onClick={toggleChat}
+          className="w-20 h-20 text-white rounded-full flex items-center justify-center text-2xl focus:outline-none transition-colors"
+          src={isOpen ? collapseIcon : chatbotIcon}
+        />
+      )}
 
       {isOpen && (
-        <div className="absolute bottom-20 right-0 w-[40vw] h-[70vh] bg-white rounded-lg shadow-lg flex flex-col overflow-hidden">
+        <div
+          data-aos="fade-up"
+          className="absolute bottom-20 right-0 w-[90vw] sm:w-[40vw] h-[70vh] bg-white dark:bg-[#010733] rounded-lg shadow-lg flex flex-col overflow-hidden"
+        >
           <div className="bg-primary-1 w-full text-white p-4 h-[15%] text-center relative">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl absolute -bottom-[50%] left-1/2 transform -translate-x-1/2">
-              <img src={chatbotIcon} />
+            <div className="w-20 h-20 bg-white dark:bg-[#010733] rounded-full flex items-center justify-center text-2xl absolute -bottom-[67%] left-1/2 transform -translate-x-1/2">
+              <img
+                className="w-16 h-16"
+                src={
+                  document.body.classList.contains("dark")
+                    ? chatbotDark
+                    : chatbotIcon
+                }
+              />
             </div>
           </div>
 
@@ -55,7 +76,14 @@ const Chatbot = () => {
               >
                 <div className="flex gap-3 items-start">
                   {message.sender === "bot" && (
-                    <img src={chatbotChatIcon} className="w-8 h-8 ml-2" />
+                    <img
+                      src={
+                        document.body.classList.contains("dark")
+                          ? chatbotChatIconDark
+                          : chatbotChatIcon
+                      }
+                      className="w-10 h-10 ml-2"
+                    />
                   )}
                   <div
                     className={`rounded-2xl px-4 py-2 ${
@@ -64,9 +92,6 @@ const Chatbot = () => {
                         : "bg-primary-2 text-white"
                     }`}
                   >
-                    {message.sender === "bot" && (
-                      <span className="mr-2">🤖</span>
-                    )}
                     {message.text}
                   </div>
                 </div>
@@ -83,7 +108,7 @@ const Chatbot = () => {
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               placeholder="Send a message..."
-              className="flex-1 rounded-lg px-4 py-2 ring-none border-primary-1 focus:ring-2 focus:ring-primary-1 focus:border-transparent"
+              className="bg flex-1 dark:text-white dark:bg-[#010733] rounded-lg px-4 py-2 ring-none border-primary-1 focus:ring-2 focus:ring-primary-1 focus:border-transparent"
             />
             <button
               type="submit"

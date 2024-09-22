@@ -30,7 +30,7 @@ const HeroSection = () => {
           </button>
           <button
             type="button"
-            className="text-white bg-primary-1 hover:bg-blue-800 w-36 md:w-52 md:h-12 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-2 md:px-5 py-2.5 me-2 mb-2"
+            className="text-white bg-primary-1 hover:bg-primary-2 w-36 md:w-52 md:h-12 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-sm px-2 md:px-5 py-2.5 me-2 mb-2"
           >
             Chat with Us
           </button>
