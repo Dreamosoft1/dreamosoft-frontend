@@ -77,10 +77,15 @@ export default function Testimonial() {
         <div className="relative">
           <div
             className="flex transition-transform duration-300 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}
+            style={{
+              transform: `translateX(-${currentIndex * (window.innerWidth >= 768 ? 33.33 : 100)}%)`,
+            }}
           >
             {testimonials.map((testimonial, index) => (
-              <div key={testimonial.id} className="w-1/3 flex-shrink-0 px-2">
+              <div
+                key={testimonial.id}
+                className="w-full md:w-1/3 flex-shrink-0 px-2"
+              >
                 <div
                   className={`bg-white rounded-lg h-96 shadow-lg  transition-all duration-300 relative ${
                     index === currentIndex + 1 ? "" : "scale-75"
