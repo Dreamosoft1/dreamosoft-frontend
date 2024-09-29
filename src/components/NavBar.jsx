@@ -55,7 +55,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#about"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-primary-1 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   About Us
                 </a>
@@ -63,7 +63,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#services"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-primary-1 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Services
                 </a>
@@ -71,7 +71,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#projects"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-primary-1 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Projects
                 </a>
@@ -79,7 +79,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="$testimonials"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-primary-1 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Testimonials
                 </a>
@@ -108,7 +108,7 @@ const NavBar = () => {
             <button
               data-collapse-toggle="navbar-default"
               type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-primary-1 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-default"
               aria-expanded="false"
             >
@@ -132,7 +132,7 @@ const NavBar = () => {
 
             {/* mobile nav links */}
             <div
-              className="flex-col fixed bg-gray-900 bg-opacity-95 top-16 left-0 w-screen hidden flex-grow justify-center"
+              className="mobile-nav flex-col fixed bg-gray-900 bg-opacity-95 top-16 left-0 w-screen hidden flex-grow justify-center"
               id="navbar-default"
             >
               <img
@@ -143,11 +143,16 @@ const NavBar = () => {
               />
               <ul className="flex h-screen flex-col font-medium -mt-2 md:p-0 items-center rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                  {/* So like anytime I just enter the chat, that face is just smiling at me. :lol
-                      Sometimes I just wish it could just talk to me. :lol Or at least just frown, or make another expression. */}
                   <a
                     href="#"
-                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    onClick={() =>
+                      document
+                        .querySelector(
+                          "[data-collapse-toggle='navbar-default']",
+                        )
+                        .click()
+                    }
+                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-primary-1 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                     aria-current="page"
                   >
                     Home
@@ -156,7 +161,14 @@ const NavBar = () => {
                 <li>
                   <a
                     href="#about"
-                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    onClick={() =>
+                      document
+                        .querySelector(
+                          "[data-collapse-toggle='navbar-default']",
+                        )
+                        .click()
+                    }
+                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-primary-1 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >
                     About Us
                   </a>
@@ -164,7 +176,14 @@ const NavBar = () => {
                 <li>
                   <a
                     href="#services"
-                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    onClick={() =>
+                      document
+                        .querySelector(
+                          "[data-collapse-toggle='navbar-default']",
+                        )
+                        .click()
+                    }
+                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-primary-1 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >
                     Services
                   </a>
@@ -172,7 +191,14 @@ const NavBar = () => {
                 <li>
                   <a
                     href="#projects"
-                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    onClick={() =>
+                      document
+                        .querySelector(
+                          "[data-collapse-toggle='navbar-default']",
+                        )
+                        .click()
+                    }
+                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-primary-1 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >
                     Projects
                   </a>
@@ -180,7 +206,14 @@ const NavBar = () => {
                 <li>
                   <a
                     href="#testimonials"
-                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    onClick={() =>
+                      document
+                        .querySelector(
+                          "[data-collapse-toggle='navbar-default']",
+                        )
+                        .click()
+                    }
+                    className="block py-2 px-3 text-white my-4 text-2xl rounded hover:bg-primary-1 md:hover:bg-transparent md:border-0 md:hover:text-[#34BDFC] md:p-0 dark:text-white md:dark:hover:text-[#34BDFC] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >
                     Testimonials
                   </a>

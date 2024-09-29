@@ -30,6 +30,10 @@ const Chatbot = () => {
             sender: "bot",
           },
         ]);
+        setTimeout(() => {
+          document.querySelector(".chatbox").scrollTop =
+            document.querySelector(".chatbox").scrollHeight;
+        }, 1);
       }, 1000);
     }
   };
@@ -39,13 +43,13 @@ const Chatbot = () => {
       {document.body.classList.contains("dark") ? (
         <img
           onClick={toggleChat}
-          className="w-20 h-20 text-white rounded-full flex items-center justify-center text-2xl focus:outline-none transition-colors"
+          className="w-16 h-16 cursor-pointer text-white rounded-full flex items-center justify-center text-2xl focus:outline-none transition-colors"
           src={isOpen ? collapseIconDark : chatbotDark}
         />
       ) : (
         <img
           onClick={toggleChat}
-          className="w-20 h-20 text-white rounded-full flex items-center justify-center text-2xl focus:outline-none transition-colors"
+          className="w-16 h-16 cursor-pointer text-white rounded-full flex items-center justify-center text-2xl focus:outline-none transition-colors"
           src={isOpen ? collapseIcon : chatbotIcon}
         />
       )}
@@ -68,7 +72,7 @@ const Chatbot = () => {
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 mt-10">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 mt-10 chatbox">
             {messages.map((message, index) => (
               <div
                 key={index}

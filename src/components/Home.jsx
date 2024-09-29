@@ -10,9 +10,10 @@ import ChooseUs from "./ChooseUs.jsx";
 import Projects from "./Projects.jsx";
 import ContactUs from "./ContactUs.jsx";
 import Footer from "./Footer.jsx";
-
 import ScreensImage from "../assets/img/screens.png";
 import Testimony from "./Testimony.jsx";
+import SimpleCarousel from "./SimpleCarousel.jsx";
+import { Toaster } from "react-hot-toast";
 
 const Home = () => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const Home = () => {
 
   return (
     <>
+      <Toaster />
       {/* Hero section */}
       <HeroSection />
       <TechStack />

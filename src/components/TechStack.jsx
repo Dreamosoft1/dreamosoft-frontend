@@ -1,9 +1,5 @@
-import htmlIcon from "../assets/icons/html-icon.svg";
-import jsIcon from "../assets/icons/js-icon.svg";
-import cssIcon from "../assets/icons/css-icon.svg";
-import pythonIcon from "../assets/icons/python-icon.svg";
-import aiIcon from "../assets/icons/ai-icon.svg";
 import "aos/dist/aos.css";
+import SimpleCarousel from "./SimpleCarousel";
 
 const TechStack = () => {
   return (
@@ -13,7 +9,7 @@ const TechStack = () => {
         className="py-12 pt-24 bg-gray-50 dark:bg-[#010833] mt-1"
         data-aos="fade-up"
       >
-        <div className="max-w-screen-xl mx-auto text-center px-6">
+        <div className="max-w-screen-xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-section-heading dark:text-white mb-4">
             Tech Stack
           </h2>
@@ -23,7 +19,7 @@ const TechStack = () => {
           </p>
 
           {/* Icons container */}
-          <div className="flex md:justify-between md:w-[70%] m-auto gap-3 items-center justify-center">
+          {/*<div className="flex md:justify-between md:w-[70%] m-auto gap-3 items-center justify-center">
             <div className="flex justify-center">
               <img src={htmlIcon} alt="HTML Icon" className="h-20 w-auto" />
             </div>
@@ -39,7 +35,8 @@ const TechStack = () => {
             <div className="flex justify-center">
               <img src={aiIcon} alt="AI Icon" className="h-20 w-auto" />
             </div>
-          </div>
+          </div>*/}
+          <SimpleCarousel />
         </div>
       </section>
     </div>
