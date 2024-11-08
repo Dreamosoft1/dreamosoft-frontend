@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import ChatBot from "./components/ChatBot";
+import RequestAService from "./components/RequestAService";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <ChatBot />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route exact path="/request/" element={<RequestAService />} />
         </Routes>
       </div>
     </>
