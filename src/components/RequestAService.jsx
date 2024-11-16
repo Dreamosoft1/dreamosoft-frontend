@@ -72,7 +72,7 @@ export default function ServiceRequestForm() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800 p-4 md:p-8">
+    <div className="min-h-screen bg-blue-50 font-inter dark:bg-[#2C375A]  p-4 md:p-8">
       <div className="mx-auto max-w-3xl bg-white dark:bg-slate-900/50 rounded-lg shadow-md overflow-hidden">
         <div className="bg-sky-500 dark:bg-slate-800 py-8 px-6 text-white">
           <h2 className="text-2xl font-semibold text-center">
