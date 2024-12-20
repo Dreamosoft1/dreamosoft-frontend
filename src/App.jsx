@@ -11,7 +11,7 @@ function App() {
     <>
       <div className="App relative dark:bg-[#2C375A]">
         <NavBar />
-        <ChatBot />
+        {/* <ChatBot />  */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route exact path="/request/" element={<RequestAService />} />

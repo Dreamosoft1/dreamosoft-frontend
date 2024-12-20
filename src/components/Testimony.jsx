@@ -1,4 +1,3 @@
-"use client";
 import profileImage from "../assets/img/profile.png";
 import quote from "../assets/icons/quote.svg";
 import { useState } from "react";
@@ -62,12 +61,15 @@ export default function Testimonial() {
   };
 
   return (
-    <div className="w-screen mx-auto px-4 py-16 bg-white dark:bg-[#055987]">
+    <div
+      id="testimonials"
+      className="w-screen mx-auto px-4 py-6 bg-white dark:bg-[#055987]"
+    >
       <div data-aos="fade-up">
         <h3 className="text-3xl font-bold text-section-heading mb-6 text-center dark:text-white">
           Testimony
         </h3>
-        <div className="flex items-center justify-center gap-3 mb-16">
+        <div className="flex items-center justify-center gap-3 mb-5">
           <span className="w-10 md:w-20 h-[4px] rounded-full shadow-xl bg-section-label"></span>
           <p className="text-section-label text-sm md:text-[16px]">
             What Our Clients Say About Us
